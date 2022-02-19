@@ -1,0 +1,11 @@
+{
+	"exclude": [
+		".git/**",
+		"node_modules/**",
+		"bower_components/**"
+	],
+	"block-indent": "	",
+	"tab-size": 1,
+	"quotes": "double",
+	"space-before-opening-brace": "\n"
+}
