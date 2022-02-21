@@ -1,38 +1,388 @@
-.App {
-  text-align: center;
+h1,
+h2
+{
+    font-family: var(--serif);
+    font-weight: bold;
+
+    color: var(--pale-snow);
+    text-shadow: var(--ice-glow);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1
+{
+    font-size: 80px;
+    line-height: 90%;
+
+    margin-bottom: 32px;
+
+    letter-spacing: -.05em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2
+{
+    font-size: 40px;
+    line-height: 95%;
+
+    letter-spacing: .01em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p
+{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 95%;
+
+    letter-spacing: -.5px;
+
+    color: var(--pale-snow);
+    text-shadow: var(--ice-glow);
 }
 
-.App-link {
-  color: #61dafb;
+a
+{
+    color: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label,
+button
+{
+    font-family: var(--sans-serif);
+    font-weight: 700;
+
+    display: block;
+}
+
+label
+{
+    font-size: 22px;
+    line-height: 100%;
+
+    color: var(--pale-snow);
+    text-shadow: var(--ice-glow);
+}
+
+input
+{
+    font-family: Times;
+    font-size: 16px;
+    line-height: 95%;
+
+    display: block;
+
+    width: 100%;
+    height: 40px;
+    margin: 8px 0 24px;
+    padding: 0 8px;
+
+    letter-spacing: .15em;
+
+    border: none;
+    border: 2px solid rgba(234, 234, 234, .4);
+    border-radius: 2px;
+    background-color: var(--pale-snow);
+    box-shadow: var(--ice-glow);
+}
+
+.App
+{
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    justify-content: space-between;
+}
+
+.form-section
+{
+    width: 100%;
+    padding: 0 16px;
+}
+
+.logo
+{
+    display: block;
+
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+button
+{
+    font-size: 22px;
+    line-height: 95%;
+
+    width: 100%;
+    height: 48px;
+    padding: 0 24px;
+
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    background: #e9ff92;
+    box-shadow: 0 0 4px rgba(255, 149, 104, .3),
+    0 0 24px rgba(255, 204, 104, .4);
+    text-shadow: 0 0 4px rgba(255, 149, 104, .3),
+    0 0 24px rgba(255, 204, 104, .4);
+}
+
+.sign-up
+{
+    margin-top: 24px;
+
+    align-self: center;
+}
+
+.form-actions
+{
+    display: flex;
+
+    margin-top: 40px;
+
+    flex-flow: column wrap;
+}
+
+footer
+{
+    margin: 0 auto;
+    padding-bottom: 8px;
+
+    opacity: .25;
+}
+
+
+/* 
+	BEAUTY
+*/
+
+.oval
+{
+    position: absolute;
+    z-index: -1;
+    top: 8px;
+    left: 50%;
+
+    width: 130vw;
+    height: 130vw;
+
+    transform: translate(-50%, 0);
+
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .9);
+    box-shadow: 0 0 200px -10px rgba(183, 138, 255, .4);
+}
+
+.sky
+{
+    position: fixed;
+    z-index: -2;
+
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+
+    content: '';
+    transform: translate3d(0, 0, 0);
+}
+
+.stars
+{
+    width: 150%;
+    height: 150%;
+
+    transform-origin: 50vw 50vh;
+    animation: 600s ease-in-out space-jump infinite;
+
+    background: #000 url('./img/sky.png') repeat left center;
+    background-size: 25%;
+
+    will-change: transform;
+}
+
+@keyframes space-jump
+{
+    0%
+    {
+        transform: scale(1) translateZ(0);
+    }
+    80%
+    {
+        transform: scale(3) translateZ(0);
+    }
+    100%
+    {
+        transform: scale(1) translateZ(0);
+    }
+}
+
+.noise
+{
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    opacity: .06;
+    background: url('./img/noise-redux-2.gif');
+}
+
+.sparkles
+{
+    position: absolute;
+    top: -80px;
+    right: -24px;
+    bottom: -80px;
+    left: -24px;
+
+    pointer-events: none;
+}
+
+.spark
+{
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+    margin: 8px;
+
+    filter: drop-shadow(0 0 3px var(--pale-snow));
+}
+
+.sparkles .spark:nth-child(2)
+{
+    right: 0;
+}
+
+.sparkles .spark:nth-child(3)
+{
+    bottom: 0;
+}
+
+.sparkles .spark:nth-child(4)
+{
+    right: 0;
+    bottom: 0;
+}
+
+
+/* 
+	MEDIA QUERIES
+*/
+
+@media (max-width: 280px)
+{
+    h1
+    {
+        font-size: 70px;
+    }
+    h2
+    {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 360px)
+{
+    .form-section
+    {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 390px)
+{
+    .form-section
+    {
+        padding: 0 32px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .oval
+    {
+        top: 50%;
+        bottom: 0;
+
+        transform: translate(-50%, -50%);
+    }
+    .form-section
+    {
+        width: 80%;
+        margin: 0 auto;
+
+        transform: translateY(-5%);
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .oval
+    {
+        width: 80vw;
+        height: 80vw;
+    }
+    button
+    {
+        width: auto;
+    }
+    .form-section
+    {
+        width: 45%;
+    }
+    .form-actions
+    {
+        flex-flow: row nowrap;
+    }
+    .sign-up
+    {
+        margin-top: 0;
+        margin-left: 32px;
+    }
+}
+
+@media (min-width: 1150px)
+{
+    .form-section
+    {
+        width: 35%;
+    }
+}
+
+@media (min-width: 2560px)
+{
+    h1
+    {
+        font-size: 100px;
+    }
+    h2
+    {
+        font-size: 50px;
+    }
+    input
+    {
+        margin: 8px 0 40px;
+    }
+    .form-section
+    {
+        width: 20%;
+
+        transform: translateY(-10%);
+    }
+    .form-actions
+    {
+        margin-top: 48px;
+    }
 }
