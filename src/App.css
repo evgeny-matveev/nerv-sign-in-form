@@ -1,4 +1,4 @@
-.App
+.SignUp
 {
     position: relative;
 
@@ -11,6 +11,42 @@
     justify-content: space-between;
 }
 
+.SignUp::before
+{
+    position: fixed;
+    z-index: -2;
+
+    width: 100vw;
+    height: 100vh;
+
+    content: '';
+    transform-origin: 50vw 50vh;
+    animation: 100s ease-in space-jump infinite;
+
+    background: #000 url('./img/sky.png') repeat left center;
+    background-size: 20%;
+
+    will-change: transform;
+}
+
+.SignUp::after
+{
+    position: absolute;
+    z-index: -1;
+    top: 8px;
+    left: 50%;
+
+    width: 130vw;
+    height: 130vw;
+
+    content: '';
+    transform: translate(-50%, 0);
+
+    border-radius: 100%;
+    background: #000;
+    box-shadow: 0 0 200px -10px rgba(183, 138, 255, .4);
+}
+
 .logo
 {
     width: 48px;
@@ -19,24 +55,18 @@
     margin-top: 24px;
 }
 
-.form-section
-{
-    width: 100%;
-    padding: 0 16px;
-}
-
-h1,
-h2
+.h1,
+.h2
 {
     font-family: var(--serif);
     font-weight: bold;
-    line-height: 1;
+    line-height: 100%;
 
     color: var(--pale-snow);
     text-shadow: var(--ice-glow);
 }
 
-h1
+.h1
 {
     font-size: 80px;
 
@@ -46,14 +76,14 @@ h1
     letter-spacing: -.05em;
 }
 
-h2
+.h2
 {
     font-size: 40px;
 
     letter-spacing: .01em;
 }
 
-p
+.text
 {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -66,13 +96,14 @@ p
     text-shadow: var(--ice-glow);
 }
 
-a
+.form-section
 {
-    color: inherit;
+    width: 100%;
+    padding: 0 16px;
 }
 
-label,
-button
+.label,
+.button
 {
     font-family: var(--sans-serif);
     font-weight: 700;
@@ -80,7 +111,7 @@ button
     display: block;
 }
 
-label
+.label
 {
     font-size: 22px;
     line-height: 100%;
@@ -89,9 +120,9 @@ label
     text-shadow: var(--ice-glow);
 }
 
-input
+.input
 {
-    font-family: Times;
+    font-family: Times, serif;
     font-size: 16px;
     line-height: 95%;
 
@@ -111,7 +142,7 @@ input
     box-shadow: var(--ice-glow);
 }
 
-button
+.button
 {
     font-size: 22px;
     line-height: 95%;
@@ -132,23 +163,22 @@ button
     0 0 24px rgba(255, 204, 104, .4);
 }
 
-.sign-up
-{
-    margin-top: 24px;
-
-    align-self: center;
-}
-
-.form-actions
+.form__actions
 {
     display: flex;
 
     margin-top: 40px;
 
-    flex-flow: column wrap;
+    flex-flow: column;
+    gap: 24px;
 }
 
-footer
+.form__sign-up
+{
+    align-self: center;
+}
+
+.footer
 {
     margin: 0 auto;
     padding-bottom: 8px;
@@ -158,53 +188,8 @@ footer
 
 
 /* 
-	BEAUTY
+    Effects
 */
-
-.oval
-{
-    position: absolute;
-    z-index: -1;
-    top: 8px;
-    left: 50%;
-
-    width: 130vw;
-    height: 130vw;
-
-    transform: translate(-50%, 0);
-
-    border-radius: 100%;
-    background: rgba(0, 0, 0, .9);
-    box-shadow: 0 0 200px -10px rgba(183, 138, 255, .4);
-}
-
-.sky
-{
-    position: fixed;
-    z-index: -2;
-
-    overflow: hidden;
-
-    width: 100vw;
-    height: 100vh;
-
-    content: '';
-    transform: translate3d(0, 0, 0);
-}
-
-.stars
-{
-    width: 150%;
-    height: 150%;
-
-    transform-origin: 50vw 50vh;
-    animation: 600s ease-in-out space-jump infinite;
-
-    background: #000 url('./img/sky.png') repeat left center;
-    background-size: 25%;
-
-    will-change: transform;
-}
 
 @keyframes space-jump
 {
@@ -212,9 +197,9 @@ footer
     {
         transform: scale(1) translateZ(0);
     }
-    80%
+    99%
     {
-        transform: scale(3) translateZ(0);
+        transform: scale(4) translateZ(0);
     }
     100%
     {
@@ -238,7 +223,7 @@ footer
     background: url('./img/noise-redux-2.gif');
 }
 
-.sparkles
+.form-section__sparkles
 {
     position: absolute;
     top: -5vw;
@@ -260,17 +245,17 @@ footer
     filter: drop-shadow(0 0 3px var(--pale-snow));
 }
 
-.sparkles .spark:nth-child(2)
+.form-section__sparkles .spark:nth-child(2)
 {
     right: 0;
 }
 
-.sparkles .spark:nth-child(3)
+.form-section__sparkles .spark:nth-child(3)
 {
     bottom: 0;
 }
 
-.sparkles .spark:nth-child(4)
+.form-section__sparkles .spark:nth-child(4)
 {
     right: 0;
     bottom: 0;
@@ -278,16 +263,16 @@ footer
 
 
 /* 
-	MEDIA QUERIES
+    MEDIA QUERIES
 */
 
 @media (max-width: 280px)
 {
-    h1
+    .h1
     {
         font-size: 70px;
     }
-    h2
+    .h2
     {
         font-size: 30px;
     }
@@ -311,7 +296,7 @@ footer
 
 @media (min-width: 768px)
 {
-    .oval
+    .SignUp::after
     {
         top: 50%;
         bottom: 0;
@@ -329,15 +314,12 @@ footer
 
 @media (min-width: 1024px)
 {
-    .oval
+    .SignUp::after
     {
         width: 85vw;
         height: 85vw;
-
-        background: rgb(0,0,0);
-        background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgb(0 0 0 / 85%) 70%, rgb(0 0 0 / 75%) 5%);
     }
-    button
+    .button
     {
         width: auto;
     }
@@ -345,28 +327,41 @@ footer
     {
         width: 40%;
     }
-    .form-actions
+    .form__actions
     {
-        flex-flow: row nowrap;
+        flex-flow: row;
+        gap: 32px;
     }
-    .sign-up
+}
+
+@media (min-width: 1440px)
+{
+    .footer
     {
-        margin-top: 0;
-        margin-left: 32px;
+        padding-bottom: 16px;
     }
 }
 
 @media (min-width: 2560px)
 {
-    h1
+    .SignUp::after
+    {
+        width: 70vw;
+        height: 70vw;
+    }
+    .logo
+    {
+        margin-top: 56px;
+    }
+    .h1
     {
         font-size: 100px;
     }
-    h2
+    .h2
     {
         font-size: 50px;
     }
-    input
+    .input
     {
         margin: 8px 0 40px;
     }
@@ -376,8 +371,26 @@ footer
 
         transform: translateY(-10%);
     }
-    .form-actions
+    .form__actions
     {
         margin-top: 48px;
+    }
+    .footer
+    {
+        padding-bottom: 32px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce)
+{
+    .noise
+    {
+        display: none;
+    }
+    .SignUp::before
+    {
+        animation: none;
+
+        background-size: 35%;
     }
 }

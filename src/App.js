@@ -1,46 +1,66 @@
 import "./App.css";
-import logo from './img/logo.png';
-import spark from './img/spark.svg'
+import logo from "./img/logo.png";
+import spark from "./img/spark.svg";
 
 function App() {
 
     return (
-        <main className="App">
-            <div className="oval" />
-            <img src={logo} alt="NERV logotype" className="logo" />
+        <main className="SignUp">
+            <img className="logo" src={logo} alt="Company's logotype" />
             <section className="form-section">
-                <h2>NERV<br />AGENCY</h2>
-                <h1>SIGN IN</h1>
+                <h2 className="h2">NERV<br />AGENCY</h2>
+                <h1 className="h1">SIGN IN</h1>
                 <form>
-                    <label htmlFor="email">EMAIL</label>
+                    <label className="label" htmlFor="email">EMAIL</label>
                     <input
+                        className="input"
                         type="email"
                         id="email"
                         autoComplete="off"
                     />
-                    <label htmlFor="pwd">PASSWORD</label>
+                    <label className="label" htmlFor="pwd">PASSWORD</label>
                     <input
+                        className="input"
                         type="password"
                         id="pwd"
                         autoComplete="off"
                     />
-                    <div className="form-actions">
-                        <button>SIGN IN</button>
-                        <p className="sign-up">Need an account? <a href="#">Sign up</a></p>
+                    <div className="form__actions">
+                        <button className="button">SIGN IN</button>
+                        <p className="text form__sign-up">Need an account? <a href="#">Sign up</a></p>
                     </div>
                 </form>
-                <div className="sparkles">
-                    <img className="spark" src={spark} alt="Spark" />
-                    <img className="spark" src={spark} alt="Spark" />
-                    <img className="spark" src={spark} alt="Spark" />
-                    <img className="spark" src={spark} alt="Spark" />
+                <div className="form-section__sparkles">
+                    <img
+                        className="spark"
+                        src={spark}
+                        role="presentation"
+                        alt="Decorative spark" 
+                    />
+                    <img
+                        className="spark"
+                        src={spark}
+                        role="presentation"
+                        alt="" 
+                    />
+                    <img
+                        className="spark"
+                        src={spark}
+                        role="presentation"
+                        alt="" 
+                    />
+                    <img
+                        className="spark"
+                        src={spark}
+                        role="presentation"
+                        alt="" 
+                    />
                 </div>
             </section>
-            <div className="sky">
-                <div className="stars" />
-            </div>
-            <div className="noise" />
-            <footer>© <a href="http://jenya.me">Jenya Matveyev</a></footer>
+            <footer className="footer">
+                © <a href="http://jenya.me">Jenya Matveyev</a>
+            </footer>
+            <div className="noise" role="presentation" />
         </main>
     );
 };
