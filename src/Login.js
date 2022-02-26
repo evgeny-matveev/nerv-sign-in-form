@@ -2,9 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import "./Login.css";
 import logo from "./img/logo.png";
 import spark from "./img/spark.svg";
-import successImg from "./img/success.png"
+import successImg from "./img/success.png";
 
-const ErrorMsg = () => <>Sorry, we cannot find an account with that email. Can we help you <a href="/recover">recover your account</a> or <a href="/signup">create a new one</a>?</>
+const ErrorMsg = () => <>Sorry, we cannot find an account with that email. Can we help you <a href="/recover">recover your account</a> or <a href="/signup">create a new one</a>?</>;
 
 export default function Login() {
     const emailRef = useRef();
