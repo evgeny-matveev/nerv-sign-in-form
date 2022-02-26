@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap&text=EMAILPSWORDGN');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap&text=EMAILPSWORDGNBCK');
 
 :root
 {
 	--pale-snow: #eaeaea;
-	--sans-serif: Roboto Condensed, Roboto, Arial, sans-serif;
+	--sans-serif: Arial, sans-serif;
+    --condensed-sans-serif: Roboto Condensed, Roboto, Arial, sans-serif;
 	--serif: Times, Times New Roman, sans-serif;
 	--ice-glow: -2px -2px 8px rgba(165, 164, 255, 0.25),
 		2px 2px 8px rgba(255, 126, 126, 0.25), 0 0 3px rgba(255, 255, 255, 0.8),
 		0 0 40px rgba(210, 189, 231, 0.7);
+    --err-col: #bf1a0f;    
 }
 
 *,
