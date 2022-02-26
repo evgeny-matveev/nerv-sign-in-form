@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/nerv-sign-in-form/static/css/main.d401a057.css",
-    "main.js": "/nerv-sign-in-form/static/js/main.2a13b7c1.js",
+    "main.css": "/nerv-sign-in-form/static/css/main.f625f542.css",
+    "main.js": "/nerv-sign-in-form/static/js/main.f624cd34.js",
     "static/media/noise.gif": "/nerv-sign-in-form/static/media/noise.814cecabbabdf334df21.gif",
     "static/media/success.png": "/nerv-sign-in-form/static/media/success.eddaa373e8d55d6176dd.png",
     "static/media/sky.png": "/nerv-sign-in-form/static/media/sky.3f87d9b88125d2717990.png",
     "index.html": "/nerv-sign-in-form/index.html",
     "static/media/spark.svg": "/nerv-sign-in-form/static/media/spark.8f91d50b6fce26186c2b9087ba3adee0.svg",
-    "main.d401a057.css.map": "/nerv-sign-in-form/static/css/main.d401a057.css.map",
-    "main.2a13b7c1.js.map": "/nerv-sign-in-form/static/js/main.2a13b7c1.js.map"
+    "main.f625f542.css.map": "/nerv-sign-in-form/static/css/main.f625f542.css.map",
+    "main.f624cd34.js.map": "/nerv-sign-in-form/static/js/main.f624cd34.js.map"
   },
   "entrypoints": [
-    "static/css/main.d401a057.css",
-    "static/js/main.2a13b7c1.js"
+    "static/css/main.f625f542.css",
+    "static/js/main.f624cd34.js"
   ]
 }
