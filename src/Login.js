@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import "./Login.css";
 import logo from "./img/logo.png";
 import spark from "./img/spark.svg";
-import successImg from "./img/success.png";
 
 const ErrorMsg = () => <>Sorry, we cannot find an account with that email. Can we help you <a href="/recover">recover your account</a> or <a href="/signup">create a new one</a>?</>;
 
@@ -39,10 +38,8 @@ export default function Login() {
         <>
             {isSuccess ? (
                 <section className="Success">
-                    <img
-                        src={successImg}
-                        alt="A woman showing a card 'Welcome to NERV'"
-                    />
+                    <div className="success-img" />
+                    <h1 className="h1">Welcome to NERV</h1>
                     <button
                         className="button"
                         onClick={() => setSuccess(false)}

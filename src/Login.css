@@ -12,17 +12,29 @@
     gap: 40px;
 }
 
-.Success img
+.success-img
 {
     width: 90vw;
     max-width: 800px;
+    height: 90vw;
+    max-height: 450px;
 
+    background-image: url('./img/success.png');
+    background-position: center;
+    background-size: cover;
     box-shadow: 0 0 200px -10px rgba(183, 138, 255, .4);
 }
 
 .Success .button
 {
     width: auto;
+}
+
+.Success .h1
+{
+    font-size: 40px;
+
+    margin-bottom: 0;
 }
 
 .Login
