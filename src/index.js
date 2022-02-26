@@ -6,19 +6,19 @@ import reportWebVitals from "./reportWebVitals";
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-	hydrate(
-		<React.StrictMode>
-			<App />
-		</React.StrictMode>,
-		document.getElementById("root")
-	);
+    hydrate(
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>,
+        document.getElementById("root")
+    );
 } else {
-	render(
-		<React.StrictMode>
-			<App />
-		</React.StrictMode>,
-		document.getElementById("root")
-	);
+    render(
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>,
+        document.getElementById("root")
+    );
 }
 
 // If you want to start measuring performance in your app, pass a function

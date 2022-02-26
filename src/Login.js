@@ -35,7 +35,7 @@ export default function Login() {
         }
     }
 
-	return (
+    return (
         <>
             {isSuccess ? (
                 <section className="Success">
@@ -124,5 +124,5 @@ export default function Login() {
                 </section>
             )}
         </>
-	);
+    );
 }
