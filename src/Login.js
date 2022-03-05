@@ -3,7 +3,13 @@ import "./Login.css";
 import logo from "./img/logo.png";
 import spark from "./img/spark.svg";
 
-const ErrorMsg = () => <>Sorry, we cannot find an account with that email. Can we help you <a href="/recover">recover your account</a> or <a href="/signup">create a new one</a>?</>;
+const ErrorMsg = () => (
+    <>
+        Sorry, we cannot find an account with that email. Can we help you{" "}
+        <a href="/recover">recover your account</a> or{" "}
+        <a href="/signup">create a new one</a>?
+    </>
+);
 
 export default function Login() {
     const emailRef = useRef();
@@ -52,7 +58,11 @@ export default function Login() {
                 <section className="Login">
                     <img className="logo" src={logo} alt="Company's logotype" />
                     <div className="form-group">
-                        <h2 className="h2">NERV<br />AGENCY</h2>
+                        <h2 className="h2">
+                            NERV
+                            <br />
+                            AGENCY
+                        </h2>
                         <h1 className="h1">SIGN IN</h1>
                         <p
                             className={err ? "err" : "offscreen"}
@@ -62,7 +72,9 @@ export default function Login() {
                             {err ? <ErrorMsg /> : ""}
                         </p>
                         <form onSubmit={handleSubmit}>
-                            <label className="label" htmlFor="email">EMAIL</label>
+                            <label className="label" htmlFor="email">
+                                EMAIL
+                            </label>
                             <input
                                 className="input"
                                 type="email"
@@ -73,7 +85,9 @@ export default function Login() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 value={email}
                             />
-                            <label className="label" htmlFor="pwd">PASSWORD</label>
+                            <label className="label" htmlFor="pwd">
+                                PASSWORD
+                            </label>
                             <input
                                 className="input"
                                 type="password"
@@ -84,7 +98,10 @@ export default function Login() {
                             />
                             <div className="form__actions">
                                 <button className="button">SIGN IN</button>
-                                <p className="text form__sign-up">Need an account? <a href="/signup">Sign up</a></p>
+                                <p className="text form__sign-up">
+                                    Need an account?{" "}
+                                    <a href="/signup">Sign up</a>
+                                </p>
                             </div>
                         </form>
                         <div className="form-group__sparkles">
@@ -92,30 +109,30 @@ export default function Login() {
                                 className="spark"
                                 src={spark}
                                 role="presentation"
-                                alt="Decorative spark" 
+                                alt="Decorative spark"
                             />
                             <img
                                 className="spark"
                                 src={spark}
                                 role="presentation"
-                                alt="" 
+                                alt=""
                             />
                             <img
                                 className="spark"
                                 src={spark}
                                 role="presentation"
-                                alt="" 
+                                alt=""
                             />
                             <img
                                 className="spark"
                                 src={spark}
                                 role="presentation"
-                                alt="" 
+                                alt=""
                             />
                         </div>
                     </div>
                     <footer className="footer">
-                        © <a href="http://jenya.me">Jenya Matveyev</a>
+                        © <a href="https://jenya.vercel.app/">Jenya Matveyev</a>
                     </footer>
                     <div className="noise" role="presentation" />
                 </section>
